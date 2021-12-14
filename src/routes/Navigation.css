@@ -1,0 +1,32 @@
+.Navigation {
+    background-color: #1baee3;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+}
+
+.navbar-logo, .nav-link{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-shadow: .5px .5px black;
+}
+  
+.navbar-logo:hover, .navbar-logo:active, .nav-link:hover, .nav-link:active{
+    text-decoration: underline white;
+}
+
+.navbar{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-logo{
+    float:left;
+    margin: 5px;
+}
+
+.nav-item{
+    float:right;
+    margin: 5px;
+}

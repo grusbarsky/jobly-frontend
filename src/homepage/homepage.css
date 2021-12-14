@@ -1,0 +1,10 @@
+.Homepage {
+    height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .logo{
+    text-align: center;
+}
