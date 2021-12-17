@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./searchform.css"
 
 // show search form and pass props
 
@@ -19,19 +18,18 @@ function SearchForm({ searchFor }) {
   }
 
   return (
-        <form className="form search-form" onSubmit={handleSubmit}>
-          <input
-              className="form-input"
+        <form className="d-flex justify-content-center my-3" onSubmit={handleSubmit}>
+            <input
+              className="form-control form-control-p-2 form-control-lg w-50"
               name="searchTerm"
               placeholder="Enter search term"
               value={searchTerm}
               onChange={handleChange}
-          />
-          <button type="submit" className="btn search-btn">
+            />
+          <button type="submit" className="btn btn-primary p-2">
             Submit
           </button>
         </form>
-      
   );
 }
 

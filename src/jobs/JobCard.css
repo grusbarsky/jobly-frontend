@@ -1,17 +1,4 @@
-.JobCard {
-    max-height: 250px;
-    margin: 2rem auto 1rem auto;
-    padding: 1rem 1rem 3rem;
-    color: inherit;
-    border-radius: 0;
-    border: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    width: 50%;
-  }
-
-.job-btn{
-    border:none;
-    border-bottom: 2px solid #1583ab;;
-    float: right;
-    padding: 10px;
+.JobCard:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2)!important;
+    transform: scale(1.05);
 }

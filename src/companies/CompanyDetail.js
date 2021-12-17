@@ -23,7 +23,7 @@ function CompanyDetail() {
 
   return (
       <div className="CompanyDetail">
-        <div className="CompanyTitle">
+        <div className="CompanyTitle text-center m-3">
           <h4>{company.name}</h4>
           <p>{company.description}</p>
         </div>

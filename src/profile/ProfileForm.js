@@ -63,50 +63,49 @@ function ProfileForm() {
   }
 
   return (
-      <div className="edit-profile">
-        <div className="form-container">
-        <div className="form-items">
+    <div className='profile-form'>
+      <div className="col-md-6 col-lg-4 offset-lg-4 p-0">
         <h3>Profile</h3>
-        <div className="card">
-          <div className="card-body profile-body">
-          <form className="profile-form">
-              <div className="form edit-form">
-                <label>Username</label>
-                <p className="form-username">{formData.username}</p>
+        <div className="card text-left">
+          <div className='card-body w-100'>
+          <form>
+              <div className="form-group">
+                <label className="fw-bold">Username</label>
+                <p className="form-control-plaintext">{formData.username}</p>
               </div>
-              <div className="form edit-form">
-                <label>First Name</label>
+              <div className="form-group">
+                <label className="fw-bold">First Name</label>
                 <input
                     name="firstName"
-                    className="form-input"
+                    className="form-control mb-3"
                     value={formData.firstName}
                     onChange={handleChange}
                 />
               </div>
-              <div className="form edit-form">
-                <label>Last Name</label>
+              <div className="form-group">
+                <label className="fw-bold">Last Name</label>
                 <input
                     name="lastName"
-                    className="form-input"
+                    className="form-control mb-3"
                     value={formData.lastName}
                     onChange={handleChange}
                 />
               </div>
-              <div className="form edit-form">
-                <label>Email</label>
+              <div className="form-group">
+                <label className="fw-bold">Email</label>
                 <input
                     name="email"
-                    className="form-input"
+                    className="form-control mb-3"
                     value={formData.email}
                     onChange={handleChange}
                 />
               </div>
-              <div className="form edit-form">
-                <label>Confirm password to make changes:</label>
+              <div className="form-group">
+                <label className="fw-bold">Confirm password to make changes:</label>
                 <input
                     type="password"
                     name="password"
-                    className="form-input"
+                    className="form-control mb-3"
                     value={formData.password}
                     onChange={handleChange}
                 />
@@ -122,7 +121,7 @@ function ProfileForm() {
                   : null}
 
               <button
-                  className="btn profile-btn"
+                  className="btn btn-primary w-100"
                   onClick={handleSubmit}
               >
                 Save Changes
@@ -130,9 +129,8 @@ function ProfileForm() {
             </form>
           </div>
         </div>
-        </div>
-        </div>
       </div>
+    </div>
   );
 }
 

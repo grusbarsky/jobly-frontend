@@ -13,7 +13,7 @@ import ProtectedRoute from "./ProtectedRoute";
 function JoblyRoutes({ login, signup }) {
 
   return (
-      <div className="pt-5">
+      <div className="page p-0">
         <Switch>
 
           <Route exact path="/">

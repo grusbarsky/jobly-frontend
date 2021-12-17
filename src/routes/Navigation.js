@@ -12,13 +12,8 @@ function Navigation({ logout }) {
 
   function loggedInNav() {
     return (
-        <ul className="navbar">
+        <ul className="nav justify-content-end">
           <li className="nav-item">
-            <Link className="nav-link" to="/" onClick={logout}>
-              Log out {currentUser.first_name || currentUser.username}
-            </Link>
-          </li>
-          <li className="nav-item ">
             <NavLink className="nav-link" to="/companies">
               Companies
             </NavLink>
@@ -33,20 +28,25 @@ function Navigation({ logout }) {
               Profile
             </NavLink>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link active" to="/" onClick={logout}>
+              Log out {currentUser.first_name || currentUser.username}
+            </Link>
+          </li>
         </ul>
     );
   }
 
   function loggedOutNav() {
     return (
-        <ul className="navbar">
+        <ul className="nav justify-content-end">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/login">
+            <NavLink aria-current="page" className="nav-link active" to="/login">
               Login
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/signup">
+            <NavLink className="nav-link active" to="/signup">
               Sign Up
             </NavLink>
           </li>
@@ -55,11 +55,13 @@ function Navigation({ logout }) {
   }
 
   return (
-      <nav className="Navigation">
-        <Link className="navbar-logo" to="/">
+      <nav className="navbar navbar-expand-lg navbar-light px-2 d-flex justify-content-between border-bottom shadow-sm">
+        <Link className="navbar-brand fw-bold" to="/">
           Jobly
         </Link>
-        {currentUser ? loggedInNav() : loggedOutNav()}
+        <div>
+          {currentUser ? loggedInNav() : loggedOutNav()}
+        </div>
       </nav>
   );
 }

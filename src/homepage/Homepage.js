@@ -8,20 +8,20 @@ function Homepage() {
   const { currentUser } = useContext(UserContext);
 
   return (
-      <div className="Homepage">
-        <div className="homepage-container">
-          <h1 className="logo">Jobly</h1>
+      <div className="homepage">
+        <div className="container text-center">
+          <h1>Jobly</h1>
           {currentUser
               ? <h2>
                 Welcome, {currentUser.firstName || currentUser.username}!
               </h2>
               : (
                   <p>
-                    <Link className="btn"
+                    <Link className="btn btn-primary m-2"
                           to="/login">
                       Log in
                     </Link>
-                    <Link className="btn"
+                    <Link className="btn btn-primary m-2"
                           to="/signup">
                       Sign up
                     </Link>

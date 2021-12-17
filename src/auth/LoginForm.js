@@ -29,30 +29,29 @@ function LoginForm({ login }) {
   }
 
   return (
-      <div className="LoginForm">
-        <div className="form-container">
-          <div className="form-items">
-          <h3 className="title">Log In</h3>
-          <div className="card">
-            <div className="card-body">
+    <div className='form'>
+      <div className="col-md-6 col-lg-4 offset-lg-4 p-0">
+          <h3>Log In</h3>
+          <div className="card shadow-lg p-5">
+            <div className="card-body w-100">
               <form onSubmit={handleSubmit}>
-                <div className="form">
-                  <label>Username</label>
+                <div className="form-group">
+                  <label className='fw-bold'>Username</label>
                   <input
                     name="username"
-                    className="form-input"
+                    className="form-control mb-3"
                     value={formData.username}
                     onChange={handleChange}
                     autoComplete="username"
                     required
                   />
                 </div>
-                <div className="form">
-                  <label>Password</label>
+                <div className="form-group">
+                  <label className='fw-bold'>Password</label>
                   <input
                     type="password"
                     name="password"
-                    className="form-input"
+                    className="form-control mb-3"
                     value={formData.password}
                     onChange={handleChange}
                     autoComplete="current-password"
@@ -64,14 +63,13 @@ function LoginForm({ login }) {
                 ? <Alert type="danger" messages={formErrors} />
                 : null}
 
-                <button className="btn submit" onSubmit={handleSubmit}>Submit</button>
+                <button className="btn btn-primary w-100" onSubmit={handleSubmit}>Submit</button>
               </form>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-  );
+          </div>
+  ); 
 }
 
 export default LoginForm;

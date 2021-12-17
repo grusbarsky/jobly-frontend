@@ -1,14 +1,13 @@
 import React from "react";
-import "./alert.css"
 
 // show alerts
 
 function Alert({ type = "danger", messages = [] }) {
 
   return (
-      <div className={`alert`} role="alert">
+      <div className={`alert-${type}`} role="alert">
         {messages.map(error => (
-            <p className="alert-text" key={error}>
+            <p className="alert-text text-center" key={error}>
               {error}
             </p>
         ))}

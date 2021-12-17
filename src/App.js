@@ -84,15 +84,15 @@ function App() {
     setApplicationIds(new Set([...applicationIds, id]));
   }
 
-  if (!infoLoaded) return <h3>Loading...</h3>;
-
   return (
       <BrowserRouter>
         <UserContext.Provider
             value={{ currentUser, setCurrentUser, hasAppliedToJob, applyToJob }}>
           <div className="App">
             <Navigation logout={logout} />
-            <Routes login={login} signup={signup} />
+            <div className='routes'>
+              <Routes login={login} signup={signup} />
+            </div>
           </div>
         </UserContext.Provider>
       </BrowserRouter>

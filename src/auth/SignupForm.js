@@ -30,56 +30,56 @@ function SignupForm({ signup }) {
   }
 
   return (
-      <div className="SignupForm">
-        <div className="form-container">
-          <h2 className="title">Sign Up</h2>
-          <div className="card">
-            <div className="card-body">
+      <div className="form">
+        <div className="col-md-6 col-lg-4 offset-lg-4 p-0">
+          <h2>Sign Up</h2>
+          <div className="card shadow-lg p-5">
+            <div className="card-body w-100">
               <form onSubmit={handleSubmit}>
-                <div className="form">
-                  <label>Username</label>
+                <div className="form-group">
+                  <label className='fw-bold'>Username</label>
                   <input
                       name="username"
-                      className="form-input"
+                      className="form-control mb-3"
                       value={formData.username}
                       onChange={handleChange}
                   />
                 </div>
-                <div className="form">
-                  <label>Password</label>
+                <div className="form-group">
+                  <label className='fw-bold'>Password</label>
                   <input
                       type="password"
                       name="password"
-                      className="form-input"
+                      className="form-control mb-3"
                       value={formData.password}
                       onChange={handleChange}
                   />
                 </div>
 
-                <div className="form">
-                  <label>First name</label>
+                <div className="form-group">
+                  <label className='fw-bold'>First name</label>
                   <input
                       name="firstName"
-                      className="form-input"
+                      className="form-control mb-3"
                       value={formData.firstName}
                       onChange={handleChange}
                   />
                 </div>
-                <div className="form">
-                  <label>Last name</label>
+                <div className="form-group">
+                  <label className='fw-bold'>Last name</label>
                   <input
                       name="lastName"
-                      className="form-input"
+                      className="form-control mb-3"
                       value={formData.lastName}
                       onChange={handleChange}
                   />
                 </div>
-                <div className="form">
-                  <label>Email</label>
+                <div className="form-group">
+                  <label className='fw-bold'>Email</label>
                   <input
                       type="email"
                       name="email"
-                      className="form-input"
+                      className="form-control mb-3"
                       value={formData.email}
                       onChange={handleChange}
                   />
@@ -92,7 +92,7 @@ function SignupForm({ signup }) {
 
                 <button
                     type="submit"
-                    className="btn submit"
+                    className="btn btn-primary w-100"
                     onSubmit={handleSubmit}
                 >
                   Submit

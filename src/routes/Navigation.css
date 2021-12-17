@@ -1,32 +1,15 @@
-.Navigation {
-    background-color: #1baee3;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
-}
-
-.navbar-logo, .nav-link{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    text-shadow: .5px .5px black;
-}
-  
-.navbar-logo:hover, .navbar-logo:active, .nav-link:hover, .nav-link:active{
-    text-decoration: underline white;
-}
-
 .navbar{
-    list-style-type: none;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+    background-color: white;
 }
 
-.navbar-logo{
-    float:left;
-    margin: 5px;
+.nav-link{
+    color: black!important;
 }
 
-.nav-item{
-    float:right;
-    margin: 5px;
+.nav-link:hover{
+    font-weight: bold;
+}
+
+[aria-current="page"]{
+    font-weight: bold;
 }
